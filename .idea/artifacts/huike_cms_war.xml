@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="huike-cms:war">
+    <output-path>$PROJECT_DIR$/../../../../IdeaPrj/huike-cms/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>huike-cms</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="huike-cms-0.1.war">
+      <element id="artifact" artifact-name="huike-cms:war exploded" />
+    </root>
+  </artifact>
+</component>

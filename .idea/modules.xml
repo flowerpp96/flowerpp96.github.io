@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../../../IdeaPrj/demo/demo.iml" filepath="$PROJECT_DIR$/../../../../IdeaPrj/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flowerpp.github.io.iml" filepath="$PROJECT_DIR$/flowerpp.github.io.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../IdeaPrj/huike-cms/huike-cms.iml" filepath="$PROJECT_DIR$/../../../../IdeaPrj/huike-cms/huike-cms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../IdeaPrj/springboot2test/huike-cms (1).iml" filepath="$PROJECT_DIR$/../../../../IdeaPrj/springboot2test/huike-cms (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../IdeaPrj/springboot2test/springboot2test.iml" filepath="$PROJECT_DIR$/../../../../IdeaPrj/springboot2test/springboot2test.iml" />
+    </modules>
+  </component>
+</project>
