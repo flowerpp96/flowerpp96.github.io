@@ -1,0 +1,623 @@
+<html>
+
+<head>
+
+<!-- #BeginEditable "doctitle" --> 
+
+<title>同学录</title>
+
+<!-- #EndEditable --> 
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css">
+
+<!-
+
+font         {	FONT-SIZE: 14px}
+
+p            {	FONT-SIZE: 14px}
+
+td{font-size:12px;line-height=:17px;}
+
+body{font-size:12px;line-height=:17px;}
+
+A:link{text-decoration:none;color:blue}
+
+A:visited{text-decoration:none;color:663366}
+
+A:active{text-decoration:none}
+
+A:hover{text-decoration:underline;color:blue}
+
+->
+
+</style>
+
+
+
+<script language="JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+
+}
+
+
+
+function MM_swapImgRestore() { //v3.0
+
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+
+}
+
+
+
+function MM_findObj(n, d) { //v3.0
+
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document); return x;
+
+}
+
+
+
+function MM_swapImage() { //v3.0
+
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+
+}
+
+
+
+function MM_showHideLayers() { //v3.0
+
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v='hide')?'hidden':v; }
+
+    obj.visibility=v; }
+
+}
+
+
+
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+
+  tmLn = document.MM_Time[tmLnName];
+
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+
+  if (myID == tmLn.ID) { //if Im newest
+
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+
+    fNew = ++tmLn.curFrame;
+
+    for (i=0; i<tmLn.length; i++) {
+
+      sprite = tmLn[i];
+
+      if (sprite.charAt(0) == 's') {
+
+        if (sprite.obj) {
+
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+
+            keyFrm=1;
+
+            for (j=0; j<sprite.values.length; j++) {
+
+              props = sprite.values[j]; 
+
+              if (numKeyFr != props.length) {
+
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+
+              } else {
+
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+
+        } } } } }
+
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+
+  } }
+
+}
+
+function MM_initTimelines() { //v4.0
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    var ns4 = (ns && parseInt(navigator.appVersion) == 4);
+    var ns5 = (ns && parseInt(navigator.appVersion) > 4);
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(9);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("sprite");
+    document.MM_Time[0][0].slot = 1;
+    if (ns4)
+        document.MM_Time[0][0].obj = document["Layer8"];
+    else if (ns5)
+        document.MM_Time[0][0].obj = document.getElementById("Layer8");
+    else
+        document.MM_Time[0][0].obj = document.all ? document.all["Layer8"] : null;
+    document.MM_Time[0][0].keyFrames = new Array(1, 13, 23, 25, 26, 27, 42, 56, 57, 58, 59, 60, 61, 62, 63, 74, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 105, 117);
+    document.MM_Time[0][0].values = new Array(5);
+    if (ns5)
+        document.MM_Time[0][0].values[0] = new Array("214px", "223px", "231px", "240px", "249px", "257px", "266px", "275px", "283px", "292px", "301px", "309px", "318px", "306px", "294px", "282px", "270px", "259px", "248px", "238px", "229px", "221px", "214px", "214px", "221px", "205px", "197px", "203px", "210px", "217px", "225px", "233px", "241px", "250px", "260px", "270px", "280px", "291px", "301px", "311px", "322px", "332px", "321px", "309px", "298px", "286px", "275px", "264px", "252px", "242px", "232px", "223px", "214px", "206px", "199px", "192px", "193px", "194px", "196px", "208px", "216px", "211px", "208px", "215px", "223px", "231px", "240px", "250px", "260px", "272px", "283px", "295px", "307px", "319px", "306px", "294px", "281px", "268px", "254px", "242px", "230px", "219px", "210px", "201px", "193px", "194px", "195px", "201px", "216px", "203px", "207px", "210px", "208px", "207px", "206px", "214px", "223px", "233px", "244px", "256px", "270px", "283px", "297px", "311px", "325px", "315px", "304px", "294px", "283px", "273px", "262px", "251px", "241px", "230px", "219px", "209px", "198px");
+    else
+        document.MM_Time[0][0].values[0] = new Array(214,223,231,240,249,257,266,275,283,292,301,309,318,306,294,282,270,259,248,238,229,221,214,214,221,205,197,203,210,217,225,233,241,250,260,270,280,291,301,311,322,332,321,309,298,286,275,264,252,242,232,223,214,206,199,192,193,194,196,208,216,211,208,215,223,231,240,250,260,272,283,295,307,319,306,294,281,268,254,242,230,219,210,201,193,194,195,201,216,203,207,210,208,207,206,214,223,233,244,256,270,283,297,311,325,315,304,294,283,273,262,251,241,230,219,209,198);
+    document.MM_Time[0][0].values[0].prop = "left";
+    if (ns5)
+        document.MM_Time[0][0].values[1] = new Array("137px", "137px", "137px", "138px", "138px", "138px", "138px", "139px", "139px", "139px", "139px", "140px", "140px", "140px", "139px", "139px", "139px", "138px", "138px", "138px", "137px", "137px", "137px", "137px", "137px", "137px", "137px", "137px", "137px", "137px", "137px", "138px", "138px", "138px", "138px", "138px", "138px", "139px", "139px", "139px", "139px", "139px", "138px", "138px", "138px", "137px", "137px", "136px", "136px", "136px", "135px", "135px", "135px", "134px", "134px", "134px", "134px", "134px", "135px", "135px", "135px", "136px", "135px", "135px", "135px", "135px", "135px", "136px", "136px", "136px", "136px", "136px", "137px", "137px", "137px", "137px", "137px", "137px", "137px", "136px", "136px", "136px", "136px", "136px", "136px", "136px", "136px", "136px", "137px", "136px", "136px", "137px", "137px", "137px", "137px", "137px", "137px", "137px", "137px", "137px", "137px", "137px", "137px", "137px", "137px", "137px", "136px", "136px", "136px", "136px", "135px", "135px", "135px", "135px", "134px", "134px", "134px");
+    else
+        document.MM_Time[0][0].values[1] = new Array(137,137,137,138,138,138,138,139,139,139,139,140,140,140,139,139,139,138,138,138,137,137,137,137,137,137,137,137,137,137,137,138,138,138,138,138,138,139,139,139,139,139,138,138,138,137,137,136,136,136,135,135,135,134,134,134,134,134,135,135,135,136,135,135,135,135,135,136,136,136,136,136,137,137,137,137,137,137,137,136,136,136,136,136,136,136,136,136,137,136,136,137,137,137,137,137,137,137,137,137,137,137,137,137,137,137,136,136,136,136,135,135,135,135,134,134,134);
+    document.MM_Time[0][0].values[1].prop = "top";
+    if (!ns4) {
+        document.MM_Time[0][0].values[0].prop2 = "style";
+        document.MM_Time[0][0].values[1].prop2 = "style";
+    }
+    document.MM_Time[0][0].values[2] = new Array("inherit","inherit","inherit","inherit","inherit","inherit","inherit","inherit","inherit","inherit","inherit","inherit","inherit","inherit","inherit","inherit","inherit","inherit","inherit","inherit","inherit","inherit","inherit","inherit","inherit","inherit","visible","inherit","hidden");
+    document.MM_Time[0][0].values[2].prop = "visibility";
+    if (!ns4)
+        document.MM_Time[0][0].values[2].prop2 = "style";
+    if (ns5)
+        document.MM_Time[0][0].values[3] = new Array("231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px", "231px");
+    else
+        document.MM_Time[0][0].values[3] = new Array(231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231,231);
+    document.MM_Time[0][0].values[3].prop = "width";
+    if (!ns4)
+        document.MM_Time[0][0].values[3].prop2 = "style";
+    if (ns5)
+        document.MM_Time[0][0].values[4] = new Array("21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px", "21px");
+    else
+        document.MM_Time[0][0].values[4] = new Array(21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21);
+    document.MM_Time[0][0].values[4].prop = "height";
+    if (!ns4)
+        document.MM_Time[0][0].values[4].prop2 = "style";
+    document.MM_Time[0][1] = new String("behavior");
+    document.MM_Time[0][1].frame = 158;
+    document.MM_Time[0][1].value = "MM_swapImage('Image1','','hand2.jpg',1)";
+    document.MM_Time[0][2] = new String("behavior");
+    document.MM_Time[0][2].frame = 27;
+    document.MM_Time[0][2].value = "MM_swapImage('Image1','','hand2.jpg',1)";
+    document.MM_Time[0][3] = new String("behavior");
+    document.MM_Time[0][3].frame = 29;
+    document.MM_Time[0][3].value = "MM_swapImgRestore()";
+    document.MM_Time[0][4] = new String("behavior");
+    document.MM_Time[0][4].frame = 56;
+    document.MM_Time[0][4].value = "MM_swapImage('Image1','','hand2.jpg',1)";
+    document.MM_Time[0][5] = new String("behavior");
+    document.MM_Time[0][5].frame = 85;
+    document.MM_Time[0][5].value = "MM_swapImage('Image1','','hand2.jpg',1)";
+    document.MM_Time[0][6] = new String("behavior");
+    document.MM_Time[0][6].frame = 117;
+    document.MM_Time[0][6].value = "MM_swapImgRestore()";
+    document.MM_Time[0][7] = new String("behavior");
+    document.MM_Time[0][7].frame = 92;
+    document.MM_Time[0][7].value = "MM_swapImgRestore()";
+    document.MM_Time[0][8] = new String("behavior");
+    document.MM_Time[0][8].frame = 61;
+    document.MM_Time[0][8].value = "MM_swapImgRestore()";
+    document.MM_Time[0].lastFrame = 158;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+
+</head>
+
+
+
+<body bgcolor="#FFFFFF" onLoad="MM_preloadImages('hand2.jpg');MM_timelinePlay('Timeline1')">
+
+<div id="Layer8" style="position:absolute; width:231px; height:21px; z-index:7; background-color: #FF0033; layer-background-color: #FF0033; border: 1px none #000000; top: 137px; left: 214px; visibility: inherit"> 
+
+  <div id="Layer11" style="position:absolute; left:2px; top:2px; width:226px; height:15px; z-index:1; visibility: inherit; background-color: #FFFF00; layer-background-color: #FFFF00; border: 1px none #000000"><font color="#FF0000">&lt;&#151;</font> 
+
+    <font color="#CC9966">把鼠标移到上面，试一试！</font></div>
+
+</div>
+
+<div id="Layer1" style="position:absolute; width:348px; height:432px; z-index:1; visibility: visible"><img src="flame.gif"  width="350" height="433" border="0" usemap="#home1" name="Image7"> 
+  <div id="Layer2" style="position:absolute; width:716px; height:14px; z-index:1; left: -1px; top: 450px; background-color: #000000; layer-background-color: #000000; border: 1px none #000000"> 
+
+    <div id="Layer10" style="position:absolute; left:17px; top:3px; width:184px; height:26px; z-index:8"> 
+    </div>
+
+    <div align="right"> 
+
+      <div id="Layer9" style="position:absolute; width:561px; height:28px; z-index:7; left: 35px; top: 10px"> 
+
+        <div align="center"> 
+          <p align="center"> <font color="#E0E699" size="-2">网址 http://</font><font color="#E0E699" face="Arial, Helvetica, sans-serif" >ourgf96</font><font color="#E0E699" size="-2">.yeah.net</font><font color="#E0E798" size="-2">　　Copyright by Ourgf96,2000</font></p> 
+
+        </div> 
+
+      </div> 
+
+      <img src="youbiaoti.gif" width="150" height="45"></div> 
+
+  </div> 
+
+</div> 
+
+ 
+
+<div id="Layer3" style="position:absolute; width:52px; height:451px; z-index:2; left: 673px; background-color: #999999; layer-background-color: #999999; border: 1px none #000000">  
+
+  <div align="center"><font color="#C0C0C0"><img src="rightflame.gif" width="34" height="451"></font></div> 
+
+</div> 
+
+<div id="Layer4" style="position:absolute; width:468px; height:32px; z-index:3; left: 212px; top: 12px">  
+
+</div> 
+
+<div id="Layer5" style="position:absolute; width:240px; height:39px; z-index:4; left: 227px; top: 46px"><applet codebase="java"  code="TextAD.class" width=350 height=32> 
+
+    <param name="Text1" value="分别这么久了"> 
+
+    <param name="Text2" value="偶尔会想起我么"> 
+
+    >  
+
+    <param name="Text3" value="忘了我的电话吧"> 
+
+    <param name="Text4" value="没关系"> 
+
+    <param name="Text5" value="号码在这呢"> 
+
+    >  
+
+    <param name="delay" value="3000"> 
+
+  </applet></div> 
+
+<div id="Layer6" style="position:absolute; width:100px; height:40px; z-index:5; left: 579px; top: 45px"><img src="youline.gif" width="100" height="41"></div> 
+
+<div id="Layer7" style="position:absolute; width:503px; height:376px; z-index:6; left: 166px; top: 85px"> 
+
+  <div align="center">  
+
+    <center> 
+
+      <table border="1"  width="100%" bordercolorlight="#0000FF" bordercolordark="#00FFFF" bgcolor="#CCCCCC" height="19">
+
+        <tr> 
+
+          <td width="59" align="center" valign="middle" height="40"><img src="hb.gif" width="24" height="26"></td>
+
+          <td width="59" align="center" valign="middle" height="40"><br>
+
+          </td>
+
+          <td width="64" align="center" valign="middle" height="40"><font color="#990000" size="3"><strong>电话</strong></font></td>
+
+          <td width="80" align="center" valign="middle" height="40"><font color="#990000" size="3"><b>手机</b></font></td>
+
+          <td width="65" align="center" valign="middle" height="40"><font color="#990000" size="3"><strong>寻呼</strong></font></td>
+
+          <td width="168" align="center" valign="middle" height="40"><font color="#990000" size="3"><strong>电邮</strong></font></td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="59" height="39"> 
+
+            <div align="center"><a href="#" onMouseOver="MM_showHideLayers('class1','','show')" onMouseOut="MM_showHideLayers('class1','','hide')"><img src="hand.jpg" width="21" height="20" name="Image1" onMouseOver="MM_swapImage('Image1','','hand2.jpg',1)" border="0" onMouseOut="MM_swapImgRestore()"></a> 
+
+            </div>
+
+            <div id="class1" style="position:absolute; width:200px; height:115px; z-index:7; top: 46px; left: 115px; background-color: #669933; layer-background-color: #669933; border: 1px none #000000; visibility: hidden"> 
+              <table width="97%" height="110" align="center">
+
+                <tr bgcolor="#CCCC99" valign="top"> 
+
+                  <td height="112">山东鲁抗医药有限公司</td>
+
+                </tr>
+
+              </table>
+
+            </div>
+
+          </td>
+
+          <td width="59" height="39"><font color="#663366"><small>王连尧</small></font></td>
+
+          <td width="64" height="39">0537-2274075</td>
+
+          <td width="80" height="39"> <br>
+
+          </td>
+
+          <td width="65" height="39"><br>
+
+          </td>
+
+          <td width="168" height="39"><a href="mailto: "><small><em><br>
+
+            </em></small></a> </td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="59" height="39"> 
+
+            <div align="center"><a href="#" onMouseOver="MM_swapImage('Image2','','hand2.jpg',1);MM_showHideLayers('class2','','show')" onMouseOut="MM_showHideLayers('class1','','hide','class2','','hide');MM_swapImgRestore()"><img src="hand.jpg" width="21" height="20" name="Image2" border="0"></a> 
+
+            </div>
+
+            <div id="class2" style="position:absolute; width:200px; height:115px; z-index:7; top: 87px; left: 115px; background-color: #669933; layer-background-color: #669933; border: 1px none #000000; visibility: hidden"> 
+              <table width="97%" height="110" align="center">
+
+                <tr bgcolor="#CCCC99" valign="top"> 
+
+                  <td height="112">山东淄博新华医药集团有限公司<br>
+                    OICQ：7937422 </td>
+
+                </tr>
+
+              </table>
+
+            </div>
+
+          </td>
+
+          <td width="59" height="39"><font color="#663366"><small>魏传波</small></font></td>
+
+          <td width="64" height="39">0543-2380345 </td>
+
+          <td width="64" height="39">　&nbsp;</td>
+
+          <td width="65" height="39"><small> <br>
+
+            </small></td>
+
+          <td width="168" height="39"><a href="mailto:chuanbo@263.net"><font face="Arial Black" color="#663366"><small>chuanbo@263.net</small></font><small><font color="#000000">&nbsp;</font></small><font face="Arial Black" color="#663366"><small><br>
+
+            </small></font></a></td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="59" height="39"> 
+
+            <div align="center"><a href="#" onMouseOver="MM_swapImage('Image3','','hand2.jpg',1);MM_showHideLayers('class2','','hide','class3','','show')" onMouseOut="MM_showHideLayers('class1','','hide','class2','','hide','class3','','hide');MM_swapImgRestore()"><img src="hand.jpg" width="21" height="20" name="Image3" border="0"></a> 
+
+              <div id="class3" style="position:absolute; width:200px; height:115px; z-index:7; top: 128px; left: 115px; background-color: #669933; layer-background-color: #669933; border: 1px none #000000; visibility: hidden"> 
+                <table width="97%" height="110" align="center">
+
+                  <tr bgcolor="#CCCC99" valign="top"> 
+
+                    <td height="112">浙江建德格林香料化工有限公司<br>
+                      OICQ：14572372 </td>
+
+                  </tr>
+
+                </table>
+
+              </div>
+
+            </div>
+
+          </td>
+
+          <td width="59" height="39"><font color="#663366"><small>孙长勇</small></font></td>
+
+          <td width="64" height="39"><small><br>
+
+            </small></td>
+
+          <td width="80" height="39">　&nbsp;</td>
+
+          <td width="64" height="39">　&nbsp;</td>
+
+          <td width="168" height="39"><a href="mailto:e-steven@21cn.com"><small><font face="Arial Black" color="#663366">e-steven@21cn.com</font><font color="#663366">　</font></small></a></td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="59" height="44"> 
+
+            <div align="center">
+
+              <div id="class4" style="position:absolute; width:200px; height:115px; z-index:7; top: 169px; left: 115px; background-color: #669933; layer-background-color: #669933; border: 1px none #000000; visibility: hidden"> 
+                <table width="97%" height="110" align="center">
+
+                  <tr bgcolor="#CCCC99" valign="top"> 
+
+                    <td height="112">OICQ：4137000</td>
+
+                  </tr>
+
+                </table>
+
+              </div>
+
+              <a href="#" onMouseOver="MM_swapImage('Image4','','hand2.jpg',1);MM_showHideLayers('class2','','hide','class4','','show')" onMouseOut="MM_showHideLayers('class1','','hide','class2','','hide','class4','','hide');MM_swapImgRestore()"><img src="hand.jpg" width="21" height="20" name="Image4" border="0"></a></div>
+
+          </td>
+
+          <td width="59" height="44"><font color="#663366"><small>胡红涛</small></font></td>
+
+          <td width="64" height="44"><small>&nbsp;</small></td>
+
+          <td width="80" height="44">&nbsp;</td>
+
+          <td width="64" height="44">027-95950-47994</td>
+
+          <td width="168" height="44"><a href="mailto:hongtao-hu@263.net"><font face="Arial Black" color="#663366"><small>hongtao-hu@263.net</small></font></a></td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="59" height="43">
+
+            <div align="center"><a href="#" onMouseOver="MM_swapImage('Image5','','hand2.jpg',1);MM_showHideLayers('class2','','hide','class5','','show')" onMouseOut="MM_showHideLayers('class1','','hide','class2','','hide','class5','','hide');MM_swapImgRestore()"><img src="hand.jpg" width="21" height="20" name="Image5" border="0"></a> 
+
+              <div id="class5" style="position:absolute; width:200px; height:115px; z-index:7; top: 217px; left: 115px; background-color: #669933; layer-background-color: #669933; border: 1px none #000000; visibility: hidden"> 
+                <table width="97%" height="110" align="center">
+
+                  <tr bgcolor="#CCCC99" valign="top"> 
+
+                    <td height="112">
+                     027-82701349(office).
+                    </td>
+
+                  </tr>
+
+                </table>
+
+              </div>
+
+            </div>
+
+          </td>
+
+          <td width="59" height="43"><font color="#663366"><small>熊�B</small></font></td>
+
+          <td width="80" height="43"> 
+
+            0722-3313212　&nbsp;
+
+          </td>
+
+          <td width="64" height="43">　&nbsp;</td>
+
+          <td width="65" height="43"><small> &nbsp;</small></td>
+
+          <td width="168" height="43"> <a href="mailto:xj984112@163.net"><font face="Arial Black" color="#663366"><small>xj984112@163.net</small></font></a></td>
+
+        </tr>
+
+        <tr> 
+
+          <td width="59" height="44">
+
+            <div align="center"><a href="#" onMouseOver="MM_swapImage('Image6','','hand2.jpg',1);MM_showHideLayers('class2','','hide','class6','','show')" onMouseOut="MM_showHideLayers('class1','','hide','class2','','hide','class6','','hide');MM_swapImgRestore()"><img src="hand.jpg" width="21" height="20" name="Image6" border="0"></a> 
+
+              <div id="class6" style="position:absolute; width:200px; height:115px; z-index:7; top: 262px; left: 115px; background-color: #669933; layer-background-color: #669933; border: 1px none #000000; visibility: hidden"> 
+                <table width="97%" height="110" align="center">
+
+                  <tr bgcolor="#CCCC99" valign="top"> 
+
+                    <td height="112">浙江建德格林香料化工有限公司<br>
+                      OICQ： 21849909</td>
+
+                  </tr>
+
+                </table>
+
+              </div>
+
+            </div>
+
+          </td>
+
+          <td width="59" height="44"><font color="#663366"><small>颜伟生</small></font></td>
+
+          <td width="64" height="44">020-87262131　</td>
+
+          <td width="80" height="44">　&nbsp;</td>
+
+          <td width="64" height="44">&nbsp;</td>
+
+          <td width="168" height="44"> <a href="mailto:utemws@chinaren.com"><font face="Arial Black" color="#663366"><small>utemws@chinaren.com</small></font></a></td>
+
+        </tr>
+
+      </table>
+
+      <table width="90%">
+
+        <tr>
+
+          <td width="81%">&nbsp;</td>
+
+          <td width="19%">&nbsp;</td>
+
+        </tr>
+
+        <tr> 
+
+          <td height="16" width="81%"> 
+
+            <div align="right"><font color="#CC0033">转到第<font color="#009900">1</font>、<a href="tongxuelu2.htm">2、</a><a href="tongxuelu3.htm">3、</a><a href="tongxuelu4.htm">4、</a><a href="tongxuelu5.htm">5、</a><a href="tongxuelu6.htm">6页</a></font></div>
+
+          </td>
+
+          <td height="16" width="19%">
+
+            <div align="center"><font color="#3399FF">共6页</font></div>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+    </center>
+
+  </div>
+
+</div>
+
+<map name="home1"> <area shape="rect" coords="58,328,137,352" href="youqinglianjie.htm"  target="_self"> 
+  <area shape="rect" coords="60,256,136,279" href="tongxuelu.htm"  target="_self"> 
+  <area shape="rect" coords="58,222,136,243" href="chap.htm" tppabs="http://www.whu.edu.cn/" target="_self"> 
+  <area shape="rect" coords="58,150,139,169" href="mousheng.htm"  target="_self"> 
+  <area shape="rect" coords="59,115,138,135" href="zuijingengxin.htm"  target="_self"> 
+  <area shape="rect" coords="57,365,135,385" href="homepage.html"  target="_self"> 
+  <area shape="rect" coords="59,184,136,208" href="http://www.wit.edu.cn"  target="_blank">
+  <area shape="rect" coords="59,296,136,318" href="http://bbs.6to23.com/2/default.asp?name=ourgf96" target="_blank"> 
+  <area shape="rect" coords="46,409,121,424" href="mailto:flowerpp@21cn.com"></map> 
+</body>
+
+</html>
+

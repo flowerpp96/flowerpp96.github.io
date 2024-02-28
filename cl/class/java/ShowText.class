@@ -1,0 +1,77 @@
+
+<html>
+<head>
+<title>Zhongo个人主页</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+</head><style>
+
+<!--
+A{font-size: 9pt}
+A:link{ color:cccccc;background-color:666666 }
+A:visited{ color: #73450D; text-decoration: none }
+A:hover{ color: ff9900;}
+td{ font-size: 9pt}
+font-size:9pt}
+input{font-size:9pt}
+-->
+</style>
+
+<body bgcolor="#FFFFFF" background="../homepage/bg.gif" tppabs="http://mypage.zhongo.com/homepage/bg.gif">
+<br>
+<table width="75%" border="1" cellspacing="0" cellpadding="0" align="center" bordercolor="#FF9800">
+  <tr> 
+    <td bgcolor="#FF9900">
+      <p><img src="../homepage/homepage3.gif" tppabs="http://mypage.zhongo.com/homepage/homepage3.gif" width="92" height="36"></p>
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+  <tr> 
+    <td height="5" bgcolor="ff9900"> 
+      <table width="60%" border="0" cellspacing="1" cellpadding="1" align="center">
+        <tr> 
+          <td bgcolor="#FFFFFF" height="6">&nbsp;</td>
+          <td bgcolor="#FFFFFF" height="6">&nbsp;</td>
+          <td bgcolor="#FFFFFF" height="6">&nbsp;</td>
+          <td bgcolor="fdf4e6" height="6">&nbsp;</td>
+          <td bgcolor="fee3bc" height="6">&nbsp;</td>
+          <td bgcolor="#FEDDAB" height="6">&nbsp;</td>
+          <td bgcolor="fed494" height="6">&nbsp;</td>
+          <td bgcolor="ffc978" height="6">&nbsp;</td>
+          <td bgcolor="ffbf5e" height="6">&nbsp;</td>
+          <td bgcolor="feb342" height="6">&nbsp;</td>
+          <td bgcolor="fda726" height="6">&nbsp;</td>
+          <td bgcolor="ff9f0e" height="6">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table width="75%" border="1" cellspacing="0" cellpadding="0" align="center" bordercolor="ff9900">
+  <tr bgcolor="FFFFFF"> 
+    <td width="20%" height="242"> 
+      <input type="hidden" name="hiddenField">
+      <form name="form1" >
+        <table width="79%" border="0" cellspacing="0" cellpadding="0" align="center">
+          <tr> 
+            <td height="20" colspan="3"> 
+              <p>AO.... ! 用户不存在或没有上传文件</p>
+              <p>&nbsp;</p>
+            </td>
+            <td width="11%" height="20">&nbsp;</td>
+          </tr>
+          <tr> 
+            <td colspan="3">&nbsp;</td>
+            <td VALIGN="BOTTOM" width="11%" > 
+              <div align="right"></div>
+            </td>
+          </tr>
+        </table>
+        <div align="center"><a href="javascript:if(confirm('http://mypage.zhongo.com/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://mypage.zhongo.com/'" tppabs="http://mypage.zhongo.com/"><img src="../homepage/bt_prev.gif" tppabs="http://mypage.zhongo.com/homepage/bt_prev.gif" border=0 width="24" height="24"></a>--- 
+          <font color="#000000"><b><a href="javascript:if(confirm('http://mypage.zhongo.com/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://mypage.zhongo.com/'" tppabs="http://mypage.zhongo.com/">返 回</a></b></font>--</div>
+      </form>
+    </td >
+  </tr>
+</table>
+</body>
+</html>
+

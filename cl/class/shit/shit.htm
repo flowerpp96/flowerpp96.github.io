@@ -1,0 +1,1063 @@
+<html>
+<head>
+<title>test</title>
+<script language="JavaScript" src="test.js"></script>
+<style type="text/css">
+<!--
+td {  font-family: "宋体"; font-size: 12px}
+-->
+</style>
+<script language="JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" tracingsrc="未命名test.JPG" tracingopacity="100" tracingx="10" tracingy="280" onLoad="MM_preloadImages('image/down_red.gif','image/right.gif')">
+<form name="test" >
+  <table border="0" width="683" align="center">
+    <tr bgcolor="#FFFFFF"> 
+      <td align="right" width="24">&nbsp; </td>
+      <td align="right" width="15">&nbsp; </td>
+      <td align="right" width="9">&nbsp; </td>
+      <td align="right" width="69">&nbsp; </td>
+      <td align="right" width="15">&nbsp;</td>
+      <td align="right" colspan="11"> 
+        <div align="center"><a href="#"><font color="#666699"><b>线索列表</b></font></a> 
+          <b><font color="#666666">筛选 排序 输出</font></b></div>
+      </td>
+    </tr>
+    <tr> 
+      <td align="right" width="24" rowspan="2" bgcolor="#FFFFFF"> 
+        <div align="center"> </div>
+      </td>
+      <td align="right" width="15" rowspan="2" bgcolor="#FFFFFF">&nbsp;</td>
+      <td align="right" width="9" rowspan="2" bgcolor="#FFFFFF">&nbsp;</td>
+      <td align="left" width="69" rowspan="2" bgcolor="#333399"><font color="#FFFFFF"><b>创建时间</b></font></td>
+      <td align="left" width="15" height="15" bgcolor="#333399"><font color="#FFFFFF"><img src="image/up.gif" width="14" height="8"></font></td>
+      <td align="left" width="48" rowspan="2" bgcolor="#333399"><font color="#FFFFFF"><b>客户</b></font></td>
+      <td align="left" width="16" height="15" bgcolor="#333399"><font color="#FFFFFF"><img src="image/up.gif" width="14" height="8"></font></td>
+      <td align="left" width="64" rowspan="2" bgcolor="#333399"><font color="#FFFFFF"></font></td>
+      <td align="left" width="74" rowspan="2" bgcolor="#333399"><font color="#FFFFFF"><b>业务类型</b></font></td>
+      <td align="left" width="16" height="15" bgcolor="#333399"><font color="#FFFFFF"><img src="image/up.gif" width="14" height="8"></font></td>
+      <td align="left" width="51" rowspan="2" bgcolor="#333399"><font color="#FFFFFF"><b>创建人</b></font></td>
+      <td align="left" width="16" height="15" bgcolor="#333399"><font color="#FFFFFF"><img src="image/up.gif" width="14" height="8"></font></td>
+      <td align="left" width="68" rowspan="2" bgcolor="#333399"><font color="#FFFFFF"><b>紧急程度</b></font></td>
+      <td align="left" width="26" bgcolor="#333399"><font color="#FFFFFF"><img src="image/up.gif" width="14" height="8"></font></td>
+      <td align="left" width="71" rowspan="2" bgcolor="#333399"><font color="#FFFFFF"><b>预计安排</b></font></td>
+      <td align="left" width="39" bgcolor="#333399"><img src="image/up.gif" width="14" height="8"></td>
+    </tr>
+    <tr> 
+      <td align="left" width="15" bgcolor="#333399"><font color="#FFFFFF"><img src="image/down_yellow.gif" width="14" height="7"></font></td>
+      <td align="left" width="16" bgcolor="#333399"><font color="#FFFFFF"><img src="image/down.gif" width="15" height="9"></font></td>
+      <td align="left" width="16" bgcolor="#333399"><font color="#FFFFFF"><img src="image/down.gif" width="15" height="9"></font></td>
+      <td align="left" width="16" bgcolor="#333399"><font color="#FFFFFF"><img src="image/down.gif" width="15" height="9"></font></td>
+      <td align="left" width="26" bgcolor="#333399"><font color="#FFFFFF"><img src="image/down.gif" width="15" height="9"></font></td>
+      <td align="left" width="39" bgcolor="#333399"><img src="image/down.gif" width="15" height="9"></td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="right" width="24" height="28"> 
+        <input type="checkbox" name="SelectedID" value="checkbox">
+      </td>
+      <td align="right" width="15" height="28"><img src="image/pen.gif" width="15" height="14"></td>
+      <td align="right" width="9" height="28"> <a href="javascript:doSection(o)"><img  src="image/right.gif" width="10" height="17" border="0" name="o_i"></a> 
+        <div id="o" style="position:absolute; width:652px; height:115px; z-index:1; left: 77px;; visibility: hidden; background-color: #CCCCCC; layer-background-color: #CCCCCC; border: 1px none #000000; top: 78px"> 
+          <table width="100%" bordercolorlight="#007F00" bordercolordark="#007F00" bordercolor="#007F00" border="2">
+            <tr bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+              <td width="15%"> 
+                <div align="center"><b>编辑</b></div>
+              </td>
+              <td width="14%"> 
+                <div align="center"><b>线索状态：</b></div>
+              </td>
+              <td> 
+                <div align="center"><b>线索编辑历史</b></div>
+              </td>
+              <td width="17%"> 
+                <div align="center"><b>线索路由历史</b></div>
+              </td>
+              <td width="17%"> 
+                <div align="center"><b>项目情况</b></div>
+              </td>
+              <td width="14%"> 
+                <div align="center"><b>项目阶段</b></div>
+              </td>
+            </tr>
+            <tr bgcolor="#CCFFFF" bordercolor="#CCCCCC"> 
+              <td width="15%"><img src="image/pen.gif" width="15" height="14"></td>
+              <td width="14%"><font color="#FF0000">xxx</font></td>
+              <td><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="17%"><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="17%"><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="14%"><font color="#FF0000">xxx</font></td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td rowspan="3" bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>线索描述</b></div>
+              </td>
+              <td rowspan="3" bgcolor="#CCFFFF" width="14%">xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx </td>
+              <td bgcolor="#FFFFFF"> 
+                <div align="center"><b>客户</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%"><font color="#336699">xxxxx</font></td>
+              <td bgcolor="#FFFFFF" width="17%"> 
+                <div align="center"><b>联系人</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%"><font color="#336699">xxxxx</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+                <div align="center"><b>线索来源</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%" bordercolor="#CCCCCC">xxxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%" bordercolor="#CCCCCC"> 
+                <div align="center"><b>业务类型</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%" bordercolor="#CCCCCC">xxxxx</td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+                <div align="center"><b>等级</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%" bordercolor="#CCCCCC">xxxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%" bordercolor="#CCCCCC"> 
+                <div align="center"><b>当前状态</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%" bordercolor="#CCCCCC">xxxxx</td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>最后编辑人</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+              <td bgcolor="#FFFFFF"> 
+                <div align="center"><b>紧急程度</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%">xxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%"> 
+                <div align="center"><b>预计安排时间</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>最后编辑时间</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+              <td bgcolor="#FFFFFF" width="19%"> 
+                <div align="center"><b>备注</b></div>
+              </td>
+              <td colspan="3" bgcolor="#CCFFFF">xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td align="left" colspan="2" height="28">00-7-25</td>
+      <td align="left" colspan="3" height="28"><font color="#333399">女友网资讯</font></td>
+      <td align="left" colspan="2" height="28">投诉</td>
+      <td align="left" colspan="2" height="28">王力</td>
+      <td align="left" colspan="2" height="28">***</td>
+      <td align="left" colspan="2" height="28">00-9-1</td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td align="right" width="24"> 
+        <input type="checkbox" name="SelectedID" value="checkbox">
+      </td>
+      <td align="right" width="15"><img src="image/pen.gif" width="15" height="14"></td>
+      <td align="right" width="9"> <a href="javascript:doSection(o1)"><img src="image/right.gif" width="9" height="16" name="o1_i" border="0"></a>
+        <div id="o1" style="position:absolute; width:652px; height:115px; z-index:1; left: 77px;; visibility: hidden; background-color: #CCCCCC; layer-background-color: #CCCCCC; border: 1px none #000000; top: 106px"> 
+          <table width="100%" bordercolorlight="#007F00" bordercolordark="#007F00" bordercolor="#007F00" border="2">
+            <tr bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+              <td width="15%"> 
+                <div align="center"><b>编辑</b></div>
+              </td>
+              <td width="14%"> 
+                <div align="center"><b>线索状态：</b></div>
+              </td>
+              <td> 
+                <div align="center"><b>线索编辑历史</b></div>
+              </td>
+              <td width="17%"> 
+                <div align="center"><b>线索路由历史</b></div>
+              </td>
+              <td width="17%"> 
+                <div align="center"><b>项目情况</b></div>
+              </td>
+              <td width="14%"> 
+                <div align="center"><b>项目阶段</b></div>
+              </td>
+            </tr>
+            <tr bgcolor="#CCFFFF" bordercolor="#CCCCCC"> 
+              <td width="15%"><img src="image/pen.gif" width="15" height="14"></td>
+              <td width="14%"><font color="#FF0000">xxx</font></td>
+              <td><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="17%"><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="17%"><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="14%"><font color="#FF0000">xxx</font></td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td rowspan="3" bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>线索描述</b></div>
+              </td>
+              <td rowspan="3" bgcolor="#CCFFFF" width="14%">xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx </td>
+              <td bgcolor="#FFFFFF"> 
+                <div align="center"><b>客户</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%"><font color="#336699">xxxxx</font></td>
+              <td bgcolor="#FFFFFF" width="17%"> 
+                <div align="center"><b>联系人</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%"><font color="#336699">xxxxx</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+                <div align="center"><b>线索来源</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%" bordercolor="#CCCCCC">xxxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%" bordercolor="#CCCCCC"> 
+                <div align="center"><b>业务类型</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%" bordercolor="#CCCCCC">xxxxx</td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+                <div align="center"><b>等级</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%" bordercolor="#CCCCCC">xxxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%" bordercolor="#CCCCCC"> 
+                <div align="center"><b>当前状态</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%" bordercolor="#CCCCCC">xxxxx</td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>最后编辑人</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+              <td bgcolor="#FFFFFF"> 
+                <div align="center"><b>紧急程度</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%">xxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%"> 
+                <div align="center"><b>预计安排时间</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>最后编辑时间</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+              <td bgcolor="#FFFFFF" width="19%"> 
+                <div align="center"><b>备注</b></div>
+              </td>
+              <td colspan="3" bgcolor="#CCFFFF">xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td align="left" colspan="2">00-7-25</td>
+      <td align="left" colspan="3"><font color="#333399">商务通电子商务</font></td>
+      <td align="left" colspan="2">咨询 </td>
+      <td align="left" colspan="2">王力</td>
+      <td align="left" colspan="2">***</td>
+      <td align="left" colspan="2">00-9-1</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="right" width="24"> 
+        <input type="checkbox" name="SelectedID" value="checkbox">
+      </td>
+      <td align="right" width="15"><img src="image/pen.gif" width="15" height="14"></td>
+      <td align="right" width="9"> <a href="javascript:doSection(o2)"><img src="image/right.gif" width="8" height="16" name="o2_i" border="0"></a> 
+        <div id="o2" style="position:absolute; width:652px; height:115px; z-index:1; left: 77px;; visibility: hidden; background-color: #CCCCCC; layer-background-color: #CCCCCC; border: 1px none #000000; top: 128px"> 
+          <table width="100%" bordercolorlight="#007F00" bordercolordark="#007F00" bordercolor="#007F00" border="2">
+            <tr bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+              <td width="15%"> 
+                <div align="center"><b>编辑</b></div>
+              </td>
+              <td width="14%"> 
+                <div align="center"><b>线索状态：</b></div>
+              </td>
+              <td> 
+                <div align="center"><b>线索编辑历史</b></div>
+              </td>
+              <td width="17%"> 
+                <div align="center"><b>线索路由历史</b></div>
+              </td>
+              <td width="17%"> 
+                <div align="center"><b>项目情况</b></div>
+              </td>
+              <td width="14%"> 
+                <div align="center"><b>项目阶段</b></div>
+              </td>
+            </tr>
+            <tr bgcolor="#CCFFFF" bordercolor="#CCCCCC"> 
+              <td width="15%"><img src="image/pen.gif" width="15" height="14"></td>
+              <td width="14%"><font color="#FF0000">xxx</font></td>
+              <td><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="17%"><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="17%"><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="14%"><font color="#FF0000">xxx</font></td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td rowspan="3" bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>线索描述</b></div>
+              </td>
+              <td rowspan="3" bgcolor="#CCFFFF" width="14%">xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx </td>
+              <td bgcolor="#FFFFFF"> 
+                <div align="center"><b>客户</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%"><font color="#336699">xxxxx</font></td>
+              <td bgcolor="#FFFFFF" width="17%"> 
+                <div align="center"><b>联系人</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%"><font color="#336699">xxxxx</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+                <div align="center"><b>线索来源</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%" bordercolor="#CCCCCC">xxxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%" bordercolor="#CCCCCC"> 
+                <div align="center"><b>业务类型</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%" bordercolor="#CCCCCC">xxxxx</td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+                <div align="center"><b>等级</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%" bordercolor="#CCCCCC">xxxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%" bordercolor="#CCCCCC"> 
+                <div align="center"><b>当前状态</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%" bordercolor="#CCCCCC">xxxxx</td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>最后编辑人</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+              <td bgcolor="#FFFFFF"> 
+                <div align="center"><b>紧急程度</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%">xxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%"> 
+                <div align="center"><b>预计安排时间</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>最后编辑时间</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+              <td bgcolor="#FFFFFF" width="19%"> 
+                <div align="center"><b>备注</b></div>
+              </td>
+              <td colspan="3" bgcolor="#CCFFFF">xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td align="left" colspan="2">00-7-24</td>
+      <td align="left" colspan="3"><font color="#333399">北京统一网络</font></td>
+      <td align="left" colspan="2">讯价</td>
+      <td align="left" colspan="2">王力</td>
+      <td align="left" colspan="2">***</td>
+      <td align="left" colspan="2">00-9-1</td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td align="right" width="24"> 
+        <input type="checkbox" name="SelectedID" value="checkbox">
+      </td>
+      <td align="right" width="15"><img src="image/pen.gif" width="15" height="14"></td>
+      <td align="right" width="9"> <a href="javascript:doSection(o3)"><img src="image/right.gif" width="9" height="16" name="o3_i" border="0"></a> 
+        <div id="o3" style="position:absolute; width:652px; height:115px; z-index:1; left: 77px;; visibility: hidden; background-color: #CCCCCC; layer-background-color: #CCCCCC; border: 1px none #000000; top: 153px"> 
+          <table width="100%" bordercolorlight="#007F00" bordercolordark="#007F00" bordercolor="#007F00" border="2">
+            <tr bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+              <td width="15%"> 
+                <div align="center"><b>编辑</b></div>
+              </td>
+              <td width="14%"> 
+                <div align="center"><b>线索状态：</b></div>
+              </td>
+              <td> 
+                <div align="center"><b>线索编辑历史</b></div>
+              </td>
+              <td width="17%"> 
+                <div align="center"><b>线索路由历史</b></div>
+              </td>
+              <td width="17%"> 
+                <div align="center"><b>项目情况</b></div>
+              </td>
+              <td width="14%"> 
+                <div align="center"><b>项目阶段</b></div>
+              </td>
+            </tr>
+            <tr bgcolor="#CCFFFF" bordercolor="#CCCCCC"> 
+              <td width="15%"><img src="image/pen.gif" width="15" height="14"></td>
+              <td width="14%"><font color="#FF0000">xxx</font></td>
+              <td><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="17%"><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="17%"><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="14%"><font color="#FF0000">xxx</font></td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td rowspan="3" bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>线索描述</b></div>
+              </td>
+              <td rowspan="3" bgcolor="#CCFFFF" width="14%">xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx </td>
+              <td bgcolor="#FFFFFF"> 
+                <div align="center"><b>客户</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%"><font color="#336699">xxxxx</font></td>
+              <td bgcolor="#FFFFFF" width="17%"> 
+                <div align="center"><b>联系人</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%"><font color="#336699">xxxxx</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+                <div align="center"><b>线索来源</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%" bordercolor="#CCCCCC">xxxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%" bordercolor="#CCCCCC"> 
+                <div align="center"><b>业务类型</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%" bordercolor="#CCCCCC">xxxxx</td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+                <div align="center"><b>等级</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%" bordercolor="#CCCCCC">xxxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%" bordercolor="#CCCCCC"> 
+                <div align="center"><b>当前状态</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%" bordercolor="#CCCCCC">xxxxx</td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>最后编辑人</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+              <td bgcolor="#FFFFFF"> 
+                <div align="center"><b>紧急程度</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%">xxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%"> 
+                <div align="center"><b>预计安排时间</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>最后编辑时间</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+              <td bgcolor="#FFFFFF" width="19%"> 
+                <div align="center"><b>备注</b></div>
+              </td>
+              <td colspan="3" bgcolor="#CCFFFF">xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td align="left" colspan="2">00-7-24</td>
+      <td align="left" colspan="3"><font color="#333399">Secure Computing</font></td>
+      <td align="left" colspan="2">购买</td>
+      <td align="left" colspan="2">王力</td>
+      <td align="left" colspan="2">***</td>
+      <td align="left" colspan="2">00-9-1</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="right" width="24"> 
+        <input type="checkbox" name="SelectedID" value="checkbox">
+      </td>
+      <td align="right" width="15"><img src="image/pen.gif" width="15" height="14"></td>
+      <td align="right" width="9"> <a href="javascript:doSection(o4)"><img src="image/right.gif" width="9" height="16" name="o4_i" border="0"></a> 
+        <div id="o4" style="position:absolute; width:652px; height:115px; z-index:1; left: 77px;; visibility: hidden; background-color: #CCCCCC; layer-background-color: #CCCCCC; border: 1px none #000000; top: 175px"> 
+          <table width="100%" bordercolorlight="#007F00" bordercolordark="#007F00" bordercolor="#007F00" border="2">
+            <tr bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+              <td width="15%"> 
+                <div align="center"><b>编辑</b></div>
+              </td>
+              <td width="14%"> 
+                <div align="center"><b>线索状态：</b></div>
+              </td>
+              <td> 
+                <div align="center"><b>线索编辑历史</b></div>
+              </td>
+              <td width="17%"> 
+                <div align="center"><b>线索路由历史</b></div>
+              </td>
+              <td width="17%"> 
+                <div align="center"><b>项目情况</b></div>
+              </td>
+              <td width="14%"> 
+                <div align="center"><b>项目阶段</b></div>
+              </td>
+            </tr>
+            <tr bgcolor="#CCFFFF" bordercolor="#CCCCCC"> 
+              <td width="15%"><img src="image/pen.gif" width="15" height="14"></td>
+              <td width="14%"><font color="#FF0000">xxx</font></td>
+              <td><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="17%"><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="17%"><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="14%"><font color="#FF0000">xxx</font></td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td rowspan="3" bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>线索描述</b></div>
+              </td>
+              <td rowspan="3" bgcolor="#CCFFFF" width="14%">xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx </td>
+              <td bgcolor="#FFFFFF"> 
+                <div align="center"><b>客户</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%"><font color="#336699">xxxxx</font></td>
+              <td bgcolor="#FFFFFF" width="17%"> 
+                <div align="center"><b>联系人</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%"><font color="#336699">xxxxx</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+                <div align="center"><b>线索来源</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%" bordercolor="#CCCCCC">xxxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%" bordercolor="#CCCCCC"> 
+                <div align="center"><b>业务类型</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%" bordercolor="#CCCCCC">xxxxx</td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+                <div align="center"><b>等级</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%" bordercolor="#CCCCCC">xxxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%" bordercolor="#CCCCCC"> 
+                <div align="center"><b>当前状态</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%" bordercolor="#CCCCCC">xxxxx</td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>最后编辑人</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+              <td bgcolor="#FFFFFF"> 
+                <div align="center"><b>紧急程度</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%">xxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%"> 
+                <div align="center"><b>预计安排时间</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>最后编辑时间</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+              <td bgcolor="#FFFFFF" width="19%"> 
+                <div align="center"><b>备注</b></div>
+              </td>
+              <td colspan="3" bgcolor="#CCFFFF">xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td align="left" colspan="2">00-7-24</td>
+      <td align="left" colspan="3"><font color="#333399">北京统一网络</font></td>
+      <td align="left" colspan="2">购买</td>
+      <td align="left" colspan="2">王力</td>
+      <td align="left" colspan="2">***</td>
+      <td align="left" colspan="2">00-9-1</td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td align="right" width="24"> 
+        <input type="checkbox" name="SelectedID" value="checkbox">
+      </td>
+      <td align="right" width="15"><img src="image/pen.gif" width="15" height="14"></td>
+      <td align="right" width="9"> <a href="javascript:doSection(o5)"><img src="image/right.gif" width="9" height="16" name="o5_i" border="0"></a> 
+        <div id="o5" style="position:absolute; width:652px; height:115px; z-index:1; left: 77px;; visibility: hidden; background-color: #CCCCCC; layer-background-color: #CCCCCC; border: 1px none #000000; top: 200px"> 
+          <table width="100%" bordercolorlight="#007F00" bordercolordark="#007F00" bordercolor="#007F00" border="2">
+            <tr bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+              <td width="15%"> 
+                <div align="center"><b>编辑</b></div>
+              </td>
+              <td width="14%"> 
+                <div align="center"><b>线索状态：</b></div>
+              </td>
+              <td> 
+                <div align="center"><b>线索编辑历史</b></div>
+              </td>
+              <td width="17%"> 
+                <div align="center"><b>线索路由历史</b></div>
+              </td>
+              <td width="17%"> 
+                <div align="center"><b>项目情况</b></div>
+              </td>
+              <td width="14%"> 
+                <div align="center"><b>项目阶段</b></div>
+              </td>
+            </tr>
+            <tr bgcolor="#CCFFFF" bordercolor="#CCCCCC"> 
+              <td width="15%"><img src="image/pen.gif" width="15" height="14"></td>
+              <td width="14%"><font color="#FF0000">xxx</font></td>
+              <td><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="17%"><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="17%"><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="14%"><font color="#FF0000">xxx</font></td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td rowspan="3" bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>线索描述</b></div>
+              </td>
+              <td rowspan="3" bgcolor="#CCFFFF" width="14%">xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx </td>
+              <td bgcolor="#FFFFFF"> 
+                <div align="center"><b>客户</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%"><font color="#336699">xxxxx</font></td>
+              <td bgcolor="#FFFFFF" width="17%"> 
+                <div align="center"><b>联系人</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%"><font color="#336699">xxxxx</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+                <div align="center"><b>线索来源</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%" bordercolor="#CCCCCC">xxxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%" bordercolor="#CCCCCC"> 
+                <div align="center"><b>业务类型</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%" bordercolor="#CCCCCC">xxxxx</td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+                <div align="center"><b>等级</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%" bordercolor="#CCCCCC">xxxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%" bordercolor="#CCCCCC"> 
+                <div align="center"><b>当前状态</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%" bordercolor="#CCCCCC">xxxxx</td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>最后编辑人</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+              <td bgcolor="#FFFFFF"> 
+                <div align="center"><b>紧急程度</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%">xxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%"> 
+                <div align="center"><b>预计安排时间</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>最后编辑时间</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+              <td bgcolor="#FFFFFF" width="19%"> 
+                <div align="center"><b>备注</b></div>
+              </td>
+              <td colspan="3" bgcolor="#CCFFFF">xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td align="left" colspan="2">00-7-22</td>
+      <td align="left" colspan="3"><font color="#333399">Secure Computing</font></td>
+      <td align="left" colspan="2">咨询</td>
+      <td align="left" colspan="2">王力</td>
+      <td align="left" colspan="2">***</td>
+      <td align="left" colspan="2">00-9-1</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="right" width="24"> 
+        <input type="checkbox" name="SelectedID" value="checkbox">
+      </td>
+      <td align="right" width="15"><img src="image/pen.gif" width="15" height="14"></td>
+      <td align="right" width="9"> <a href="javascript:doSection(o6)"><img src="image/right.gif" width="9" height="16" name="o6_i" border="0"></a> 
+        <div id="o6" style="position:absolute; width:652px; height:115px; z-index:1; left: 77px;; visibility: hidden; background-color: #CCCCCC; layer-background-color: #CCCCCC; border: 1px none #000000; top: 223px"> 
+          <table width="100%" bordercolorlight="#007F00" bordercolordark="#007F00" bordercolor="#007F00" border="2">
+            <tr bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+              <td width="15%"> 
+                <div align="center"><b>编辑</b></div>
+              </td>
+              <td width="14%"> 
+                <div align="center"><b>线索状态：</b></div>
+              </td>
+              <td> 
+                <div align="center"><b>线索编辑历史</b></div>
+              </td>
+              <td width="17%"> 
+                <div align="center"><b>线索路由历史</b></div>
+              </td>
+              <td width="17%"> 
+                <div align="center"><b>项目情况</b></div>
+              </td>
+              <td width="14%"> 
+                <div align="center"><b>项目阶段</b></div>
+              </td>
+            </tr>
+            <tr bgcolor="#CCFFFF" bordercolor="#CCCCCC"> 
+              <td width="15%"><img src="image/pen.gif" width="15" height="14"></td>
+              <td width="14%"><font color="#FF0000">xxx</font></td>
+              <td><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="17%"><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="17%"><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="14%"><font color="#FF0000">xxx</font></td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td rowspan="3" bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>线索描述</b></div>
+              </td>
+              <td rowspan="3" bgcolor="#CCFFFF" width="14%">xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx </td>
+              <td bgcolor="#FFFFFF"> 
+                <div align="center"><b>客户</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%"><font color="#336699">xxxxx</font></td>
+              <td bgcolor="#FFFFFF" width="17%"> 
+                <div align="center"><b>联系人</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%"><font color="#336699">xxxxx</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+                <div align="center"><b>线索来源</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%" bordercolor="#CCCCCC">xxxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%" bordercolor="#CCCCCC"> 
+                <div align="center"><b>业务类型</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%" bordercolor="#CCCCCC">xxxxx</td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+                <div align="center"><b>等级</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%" bordercolor="#CCCCCC">xxxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%" bordercolor="#CCCCCC"> 
+                <div align="center"><b>当前状态</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%" bordercolor="#CCCCCC">xxxxx</td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>最后编辑人</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+              <td bgcolor="#FFFFFF"> 
+                <div align="center"><b>紧急程度</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%">xxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%"> 
+                <div align="center"><b>预计安排时间</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>最后编辑时间</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+              <td bgcolor="#FFFFFF" width="19%"> 
+                <div align="center"><b>备注</b></div>
+              </td>
+              <td colspan="3" bgcolor="#CCFFFF">xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td align="left" colspan="2">00-7-21</td>
+      <td align="left" colspan="3"><font color="#333399">Secure Computing</font></td>
+      <td align="left" colspan="2">咨询</td>
+      <td align="left" colspan="2">王力</td>
+      <td align="left" colspan="2">***</td>
+      <td align="left" colspan="2">00-9-1</td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td align="right" width="24"> 
+        <input type="checkbox" name="SelectedID" value="checkbox">
+      </td>
+      <td align="right" width="15"><img src="image/pen.gif" width="15" height="14"></td>
+      <td align="right" width="9"> <a href="javascript:doSection(o7)"><img src="image/right.gif" width="9" height="16" name="o7_i" border="0"></a> 
+        <div id="o7" style="position:absolute; width:652px; height:115px; z-index:1; left: 77px;; visibility: hidden; background-color: #CCCCCC; layer-background-color: #CCCCCC; border: 1px none #000000; top: 248px"> 
+          <table width="100%" bordercolorlight="#007F00" bordercolordark="#007F00" bordercolor="#007F00" border="2">
+            <tr bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+              <td width="15%"> 
+                <div align="center"><b>编辑</b></div>
+              </td>
+              <td width="14%"> 
+                <div align="center"><b>线索状态：</b></div>
+              </td>
+              <td> 
+                <div align="center"><b>线索编辑历史</b></div>
+              </td>
+              <td width="17%"> 
+                <div align="center"><b>线索路由历史</b></div>
+              </td>
+              <td width="17%"> 
+                <div align="center"><b>项目情况</b></div>
+              </td>
+              <td width="14%"> 
+                <div align="center"><b>项目阶段</b></div>
+              </td>
+            </tr>
+            <tr bgcolor="#CCFFFF" bordercolor="#CCCCCC"> 
+              <td width="15%"><img src="image/pen.gif" width="15" height="14"></td>
+              <td width="14%"><font color="#FF0000">xxx</font></td>
+              <td><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="17%"><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="17%"><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="14%"><font color="#FF0000">xxx</font></td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td rowspan="3" bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>线索描述</b></div>
+              </td>
+              <td rowspan="3" bgcolor="#CCFFFF" width="14%">xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx </td>
+              <td bgcolor="#FFFFFF"> 
+                <div align="center"><b>客户</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%"><font color="#336699">xxxxx</font></td>
+              <td bgcolor="#FFFFFF" width="17%"> 
+                <div align="center"><b>联系人</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%"><font color="#336699">xxxxx</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+                <div align="center"><b>线索来源</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%" bordercolor="#CCCCCC">xxxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%" bordercolor="#CCCCCC"> 
+                <div align="center"><b>业务类型</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%" bordercolor="#CCCCCC">xxxxx</td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+                <div align="center"><b>等级</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%" bordercolor="#CCCCCC">xxxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%" bordercolor="#CCCCCC"> 
+                <div align="center"><b>当前状态</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%" bordercolor="#CCCCCC">xxxxx</td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>最后编辑人</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+              <td bgcolor="#FFFFFF"> 
+                <div align="center"><b>紧急程度</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%">xxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%"> 
+                <div align="center"><b>预计安排时间</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>最后编辑时间</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+              <td bgcolor="#FFFFFF" width="19%"> 
+                <div align="center"><b>备注</b></div>
+              </td>
+              <td colspan="3" bgcolor="#CCFFFF">xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td align="left" colspan="2">00-7-19</td>
+      <td align="left" colspan="3"><font color="#333399">女友网资讯</font></td>
+      <td align="left" colspan="2">投诉</td>
+      <td align="left" colspan="2">王力</td>
+      <td align="left" colspan="2">***</td>
+      <td align="left" colspan="2">00-9-1</td>
+    </tr>
+    <tr bgcolor="#FFFFCC"> 
+      <td align="right" width="24"> 
+        <input type="checkbox" name="SelectedID" value="checkbox">
+      </td>
+      <td align="right" width="15"><img src="image/pen.gif" width="15" height="14"></td>
+      <td align="right" width="9"> <a href="javascript:doSection(o8)"><img src="image/right.gif" width="9" height="16" name="o8_i" border="0"></a> 
+        <div id="o8" style="position:absolute; width:652px; height:115px; z-index:1; left: 77px;; visibility: hidden; background-color: #CCCCCC; layer-background-color: #CCCCCC; border: 1px none #000000; top: 271px"> 
+          <table width="100%" bordercolorlight="#007F00" bordercolordark="#007F00" bordercolor="#007F00" border="2">
+            <tr bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+              <td width="15%"> 
+                <div align="center"><b>编辑</b></div>
+              </td>
+              <td width="14%"> 
+                <div align="center"><b>线索状态：</b></div>
+              </td>
+              <td> 
+                <div align="center"><b>线索编辑历史</b></div>
+              </td>
+              <td width="17%"> 
+                <div align="center"><b>线索路由历史</b></div>
+              </td>
+              <td width="17%"> 
+                <div align="center"><b>项目情况</b></div>
+              </td>
+              <td width="14%"> 
+                <div align="center"><b>项目阶段</b></div>
+              </td>
+            </tr>
+            <tr bgcolor="#CCFFFF" bordercolor="#CCCCCC"> 
+              <td width="15%"><img src="image/pen.gif" width="15" height="14"></td>
+              <td width="14%"><font color="#FF0000">xxx</font></td>
+              <td><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="17%"><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="17%"><img src="image/folder.gif" width="17" height="14"></td>
+              <td width="14%"><font color="#FF0000">xxx</font></td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td rowspan="3" bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>线索描述</b></div>
+              </td>
+              <td rowspan="3" bgcolor="#CCFFFF" width="14%">xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx<br>
+                xxxxxxxxxxxx </td>
+              <td bgcolor="#FFFFFF"> 
+                <div align="center"><b>客户</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%"><font color="#336699">xxxxx</font></td>
+              <td bgcolor="#FFFFFF" width="17%"> 
+                <div align="center"><b>联系人</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%"><font color="#336699">xxxxx</font></td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+                <div align="center"><b>线索来源</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%" bordercolor="#CCCCCC">xxxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%" bordercolor="#CCCCCC"> 
+                <div align="center"><b>业务类型</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%" bordercolor="#CCCCCC">xxxxx</td>
+            </tr>
+            <tr> 
+              <td bgcolor="#FFFFFF" bordercolor="#CCCCCC"> 
+                <div align="center"><b>等级</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%" bordercolor="#CCCCCC">xxxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%" bordercolor="#CCCCCC"> 
+                <div align="center"><b>当前状态</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%" bordercolor="#CCCCCC">xxxxx</td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>最后编辑人</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+              <td bgcolor="#FFFFFF"> 
+                <div align="center"><b>紧急程度</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="17%">xxxxx</td>
+              <td bgcolor="#FFFFFF" width="17%"> 
+                <div align="center"><b>预计安排时间</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+            </tr>
+            <tr bordercolor="#CCCCCC"> 
+              <td bgcolor="#FFFFFF" width="15%"> 
+                <div align="center"><b>最后编辑时间</b></div>
+              </td>
+              <td bgcolor="#CCFFFF" width="14%">xxxxx</td>
+              <td bgcolor="#FFFFFF" width="19%"> 
+                <div align="center"><b>备注</b></div>
+              </td>
+              <td colspan="3" bgcolor="#CCFFFF">xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td align="left" colspan="2">00-7-19</td>
+      <td align="left" colspan="3"><font color="#333399">Secure Computing</font></td>
+      <td align="left" colspan="2">购买</td>
+      <td align="left" colspan="2">王力</td>
+      <td align="left" colspan="2">***</td>
+      <td align="left" colspan="2">00-9-1</td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td align="right" width="24"> 
+        <input type="checkbox" name="allbox" value="Check All" onClick="CA();">
+      </td>
+      <td align="right" colspan="15"> 
+        <div align="left">选中/撤销所有线索</div>
+      </td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td align="right" width="24" height="28"></td>
+      <td align="right" width="15" height="28">&nbsp;</td>
+      <td align="right" width="9" height="28">&nbsp;</td>
+      <td align="right" width="69" height="28">&nbsp;</td>
+      <td align="right" width="15" height="28">&nbsp;</td>
+      <td align="right" colspan="3" height="28">&nbsp;</td>
+      <td align="right" colspan="2" height="28"></td>
+      <td align="right" colspan="2" height="28"></td>
+      <td align="right" colspan="2" height="28"></td>
+      <td align="right" colspan="2" height="28"></td>
+    </tr>
+  </table>
+ </form>
+  
+
+<p>&nbsp;</p>
+<p>使用工具：PhotoShop、Dreamweaver、记事本 <br>
+  &nbsp;参考Web： www.21cn.com(mail部分) </p>
+
+  <p>实现功能：<br>
+    1、 实现点击三角展开本条记录的详细信息，位置在本条记录的下方，覆盖其他记录；再点击向下的三角，收回详细信息。<br>
+    2、 每条记录前有选中框。实现点击"选中/撤销所有线索"时，选中或撤销所有的记录。</p>
+
+<p><font color="#CC6633">若公司有疑问，可<a href="mailto:flowerpp@21cn.com">发Email</a>或电话（０３１１－３６１０１２５）.
+  </font></p>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+</body>  
+</html>  
